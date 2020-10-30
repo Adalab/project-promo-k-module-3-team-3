@@ -1,0 +1,28 @@
+.form__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__button {
+    justify-self: flex-end;
+    border: none;
+    background: none;
+    color: $colorTertiaryDark;
+    width: 16px;
+    height: 18px;
+    font-size: 18px;
+
+    &:hover {
+      color: $colorTertiaryDarkLight;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    padding-left: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+.icon {
+  height: 26px;
+  width: auto;
+  color: $colorPrimary;
+  font-size: 22.4px;
+  @media (min-width: 768px) {
+    height: 29px;
+    font-size: 28px;
+  }
+}
+
+.icon-menu {
+  width: 21px;
+  height: 18px;
+  font-size: 18px;
+  color: $colorPrimary;
+}

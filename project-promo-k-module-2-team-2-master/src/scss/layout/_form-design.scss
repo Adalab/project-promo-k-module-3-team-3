@@ -1,0 +1,79 @@
+.form {
+  &__label {
+    text-transform: uppercase;
+    margin-left: 19px;
+  }
+  &__color {
+    display: flex;
+    justify-content: space-between;
+
+    &--container {
+      // interactive show/hide
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: ease 1s;
+    }
+
+    &__box {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    &__input {
+      margin-right: 10px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      &:focus {
+        outline: none;
+      }
+      &:checked {
+        appearance: none;
+        border: 5px solid $colorSecondaryMidtone;
+        transition: linear 0.05s;
+      }
+    }
+    &__option {
+      display: flex;
+    }
+    &__first {
+      background-color: $colorSecondaryDark;
+    }
+    &__second {
+      background-color: $colorSecondaryMidtone;
+    }
+    &__third {
+      background-color: $colorSecondaryLight;
+    }
+    &__fourth {
+      background-color: $colorOptionSecondDark;
+    }
+    &__fifth {
+      background-color: $colorOptionSecondMidtone;
+    }
+    &__sixth {
+      background-color: $colorOptionSecondLight;
+    }
+    &__seventh {
+      background-color: $colorOptionThirdDark;
+    }
+    &__eighth {
+      background-color: $colorOptionThirdMidtone;
+    }
+    &__nineth {
+      background-color: $colorOptionThirdLight;
+    }
+    &__tenth {
+      background-color: $colorOptionFourthDark;
+    }
+    &__eleventh {
+      background-color: $colorOptionFourthLight;
+    }
+    &__twelfth {
+      background-color: $colorOptionFourthMidtone;
+    }
+  }
+}
