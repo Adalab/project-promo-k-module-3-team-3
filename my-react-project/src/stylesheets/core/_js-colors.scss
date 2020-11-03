@@ -1,0 +1,83 @@
+// First palette
+
+.palette0 {
+  .preview__card__title__name {
+    color: $colorSecondaryDark;
+  }
+  .preview__card__title__inner {
+    border-color: $colorSecondaryMidtone;
+  }
+  .preview__card__sm__list__icon {
+    border-color: $colorSecondaryLight;
+
+    &:hover {
+      border-color: $colorSecondaryMidtone;
+    }
+  }
+  .preview__card__sm__list__icon__link {
+    color: $colorSecondaryDark;
+  }
+}
+
+// Second Palette
+
+.palette1 {
+  .preview__card__title__name {
+    color: $colorOptionSecondDark;
+  }
+  .preview__card__title__inner {
+    border-color: $colorOptionSecondMidtone;
+  }
+  .preview__card__sm__list__icon {
+    border-color: $colorOptionSecondLight;
+
+    &:hover {
+      border-color: $colorOptionSecondMidtone;
+    }
+  }
+  .preview__card__sm__list__icon__link {
+    color: $colorOptionSecondDark;
+  }
+}
+
+// Third palette
+
+.palette2 {
+  .preview__card__title__name {
+    color: $colorOptionThirdDark;
+  }
+  .preview__card__title__inner {
+    border-color: $colorOptionThirdMidtone;
+  }
+  .preview__card__sm__list__icon {
+    border-color: $colorOptionThirdLight;
+
+    &:hover {
+      border-color: $colorOptionThirdMidtone;
+    }
+  }
+  .preview__card__sm__list__icon__link {
+    color: $colorOptionThirdDark;
+  }
+}
+
+// Fourth palette
+
+.palette3 {
+  .preview__card__title__name {
+    color: $colorOptionFourthDark;
+  }
+  .preview__card__title__inner {
+    border-color: $colorOptionFourthMidtone;
+  }
+  .preview__card__sm__list__icon {
+    border-color: $colorOptionFourthMidtone;
+
+    &:hover {
+      border-color: $colorOptionFourthLight;
+    }
+  }
+  .preview__card__sm__list__icon__link {
+    color: $colorOptionFourthDark;
+  }
+}
