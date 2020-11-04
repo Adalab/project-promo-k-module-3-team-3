@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.bca702ee.chunk.css",
+    "main.js": "./static/js/main.952f264a.chunk.js",
+    "main.js.map": "./static/js/main.952f264a.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.bdfbe36d.js",
+    "runtime-main.js.map": "./static/js/runtime-main.bdfbe36d.js.map",
+    "static/js/2.4550d8df.chunk.js": "./static/js/2.4550d8df.chunk.js",
+    "static/js/2.4550d8df.chunk.js.map": "./static/js/2.4550d8df.chunk.js.map",
+    "static/js/3.ccd04021.chunk.js": "./static/js/3.ccd04021.chunk.js",
+    "static/js/3.ccd04021.chunk.js.map": "./static/js/3.ccd04021.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.bca702ee.chunk.css.map": "./static/css/main.bca702ee.chunk.css.map",
+    "static/js/2.4550d8df.chunk.js.LICENSE.txt": "./static/js/2.4550d8df.chunk.js.LICENSE.txt",
+    "static/media/Catrinas-7.b05267c7.png": "./static/media/Catrinas-7.b05267c7.png",
+    "static/media/catrina.9f0794dd.png": "./static/media/catrina.9f0794dd.png",
+    "static/media/App.scss": "./static/media/orange-flowers.4e0b0d5b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bdfbe36d.js",
+    "static/js/2.4550d8df.chunk.js",
+    "static/css/main.bca702ee.chunk.css",
+    "static/js/main.952f264a.chunk.js"
+  ]
+}
