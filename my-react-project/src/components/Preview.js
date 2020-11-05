@@ -37,6 +37,7 @@ class Preview extends React.Component {
               <ul className="preview__card__sm__list">
                 <li className="preview__card__sm__list__icon">
                   <a
+                    href="www.adalab.es" // Esto lo hemos añadido para que no de error
                     className="preview__card__sm__list__icon__link mobile js-preview-phone"
                     alt="Telephone"
                     target="_blank"
@@ -47,6 +48,7 @@ class Preview extends React.Component {
                 </li>
                 <li className="preview__card__sm__list__icon">
                   <a
+                    href="www.gmail.com" // Esto lo hemos añadido para que no de error
                     className="preview__card__sm__list__icon__link email js-preview-email"
                     alt="Email"
                     target="_blank"
@@ -58,6 +60,7 @@ class Preview extends React.Component {
 
                 <li className="preview__card__sm__list__icon">
                   <a
+                    href="www.linkedin.es" // Esto lo hemos añadido para que no de error
                     className="js-preview-linkedin preview__card__sm__list__icon__link linkedin"
                     alt="Linkedin"
                     title="Linkedin"
@@ -69,6 +72,7 @@ class Preview extends React.Component {
 
                 <li className="preview__card__sm__list__icon">
                   <a
+                    href="www.github.com" // Esto lo hemos añadido para que no de error
                     className=" js-preview-github preview__card__sm__list__icon__link github"
                     alt="Github"
                     title="Github"

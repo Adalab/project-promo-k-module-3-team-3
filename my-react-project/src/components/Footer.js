@@ -18,11 +18,17 @@ class Footer extends React.Component {
             Catrinas profile-cards @2020
           </small>
         </div>
-        <a href="https://adalab.es/" target="_blank" className="footer__logo">
+        <a
+          href="https://adalab.es/"
+          target="_blank"
+          rel="noreferrer"
+          className="footer__logo"
+        >
           <img
             className="footer__logo__img"
             src={logoFooterAdalab}
             title="Adalab"
+            alt="Adalab logo"
           />
         </a>
       </footer>
