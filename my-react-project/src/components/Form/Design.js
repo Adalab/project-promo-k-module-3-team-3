@@ -1,26 +1,21 @@
 import React from "react";
 import "../../stylesheets/layout/_form-design.scss";
+import Collapsable from "./Collapsable";
 
 class Design extends React.Component {
   render() {
     return (
       <fieldset className="form__design column">
-        <div className="form__box js-form__box__button--design">
-          <div className="form__box__item">
-            <i
-              className="far fa-object-ungroup icon-menu"
-              aria-hidden="true"
-            ></i>
-            <h2 className="form__box__title txt-lg" aria-label="Diseña">
-              Diseña
-            </h2>
-          </div>
-          <button className="form__box__button">
-            <div className="form__box__button__left-bar"></div>
-            <div className="form__box__button__right-bar"></div>
-          </button>
-        </div>
-        <div className="form__color--container">
+        <Collapsable
+          arrow={this.props.arrow}
+          event={this.props.eventCollapsable}
+          classTitle="design"
+          icon="far fa-object-ungroup icon-menu"
+          name="Diseña"
+        ></Collapsable>
+        <div
+          className={`form__color--container form__color--container${this.props.state}`}
+        >
           <div className="form__color m-top">
             <label htmlFor="color1" className="form__label">
               Colores

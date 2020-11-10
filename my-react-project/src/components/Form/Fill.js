@@ -1,27 +1,19 @@
 import React from "react";
 import "../../stylesheets/layout/_form.scss";
+import Collapsable from "./Collapsable";
 
 class Fill extends React.Component {
   render() {
     return (
       <fieldset className="form__fill column txt-dark bold">
-        <div className="form__box js-form__box__button--fill">
-          <div className="form__box__item">
-            <i className="far fa-keyboard icon-menu" aria-hidden="true"></i>
-            <h2
-              className="form__box__title txt-lg txt-light"
-              aria-label="Rellena"
-            >
-              Rellena
-            </h2>
-          </div>
-          <button className="form__box__button">
-            <div className="form__box__button__left-bar"></div>
-            <div className="form__box__button__right-bar"></div>
-          </button>
-        </div>
-
-        <div className="form__data">
+        <Collapsable
+          arrow={this.props.arrow}
+          event={this.props.eventCollapsable}
+          classTitle="fill"
+          icon="far fa-keyboard icon-menu"
+          name="Rellena"
+        ></Collapsable>
+        <div className={`form__data form__data${this.props.state}`}>
           <div className="form__data__name m-top" aria-label="Nombre completo">
             <label className="form__data__label" htmlFor="name">
               Nombre completo

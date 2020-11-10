@@ -7,6 +7,14 @@
     // interactive show/hide
     // height: 0;
     // opacity: 0;
+    &false {
+      height: 0;
+      opacity: 0;
+    }
+    &true {
+      height: 110;
+      opacity: 1;
+    }
     overflow: hidden;
     transition: ease 0.5s;
   }

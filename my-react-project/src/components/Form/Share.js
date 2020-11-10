@@ -1,23 +1,22 @@
 import React from "react";
 import "../../stylesheets/layout/_form-share.scss";
+import Collapsable from "./Collapsable";
 
 class Share extends React.Component {
   render() {
     return (
       <fieldset className="form__share column">
-        <div className="form__box js-form__box__button--share">
-          <div className="form__box__item">
-            <i className="fas fa-share-alt icon-menu" aria-hidden="true"></i>
-            <h2 className="form__box__title txt-lg" aria-label="Comparte">
-              Comparte
-            </h2>
-          </div>
-          <button className="form__box__button">
-            <div className="form__box__button__left-bar"></div>
-            <div className="form__box__button__right-bar"></div>
-          </button>
-        </div>
-        <div className="form__share--container">
+        <Collapsable
+          arrow={this.props.arrow}
+          event={this.props.eventCollapsable}
+          classTitle="share"
+          icon="fas fa-share-alt icon-menu"
+          name="Comparte"
+        ></Collapsable>
+        <div
+          className={`form__share--container
+        form__share--container${this.props.state}`}
+        >
           <button
             type="submit"
             className="form__share--button js-reset js-form__share--button txt-lg txt-wh txt-up txt-fsec"

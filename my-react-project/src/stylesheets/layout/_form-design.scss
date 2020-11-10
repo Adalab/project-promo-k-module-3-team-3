@@ -10,11 +10,16 @@
     justify-content: space-between;
 
     &--container {
-      // interactive show/hide
-      // height: 0;
-      // opacity: 0;
       overflow: hidden;
       transition: ease 1s;
+      &false {
+        height: 0;
+        opacity: 0;
+      }
+      &true {
+        height: 200;
+        opacity: 1;
+      }
     }
 
     &__box {
