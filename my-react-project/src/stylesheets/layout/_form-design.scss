@@ -12,14 +12,14 @@
     &--container {
       overflow: hidden;
       transition: ease 1s;
-      &false {
+      /*&false {
         height: 0;
         opacity: 0;
       }
       &true {
         height: 200;
         opacity: 1;
-      }
+      }*/
     }
 
     &__box {
@@ -83,4 +83,13 @@
       background-color: $colorOptionFourthMidtone;
     }
   }
+}
+
+.collapsable-content {
+  height: 0;
+  opacity: 0;
+}
+.collapsable-content.open {
+  height: auto;
+  opacity: 1;
 }
