@@ -9,19 +9,6 @@
     display: flex;
     justify-content: space-between;
 
-    &--container {
-      overflow: hidden;
-      transition: ease 1s;
-      /*&false {
-        height: 0;
-        opacity: 0;
-      }
-      &true {
-        height: 200;
-        opacity: 1;
-      }*/
-    }
-
     &__box {
       display: flex;
       align-items: center;
@@ -86,6 +73,8 @@
 }
 
 .collapsable-content {
+  overflow: hidden;
+  transition: ease 1s;
   height: 0;
   opacity: 0;
 }

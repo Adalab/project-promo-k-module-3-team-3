@@ -12,7 +12,7 @@ class Form extends React.Component {
         className="form txt-fsec txt-sm txt-light"
       >
         <Design />
-        <Fill />
+        <Fill handleChange={this.props.handleChange} state={this.props.state} />
         <Share />
       </form>
     );

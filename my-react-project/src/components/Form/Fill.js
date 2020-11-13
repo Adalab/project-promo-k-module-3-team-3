@@ -1,6 +1,7 @@
 import React from "react";
 import "../../stylesheets/layout/_form.scss";
 import Collapsable from "./Collapsable";
+import InputFill from "./InputFill";
 
 class Fill extends React.Component {
   render() {
@@ -16,36 +17,38 @@ class Fill extends React.Component {
               className="form__data__name m-top"
               aria-label="Nombre completo"
             >
-              <label className="form__data__label" htmlFor="name">
-                Nombre completo
-              </label>
-              <input
-                required
-                className="form__data__input js-input-name js-intro-name"
+              <InputFill
+                handleChange={this.props.handleChange}
+                classLabel="form__data__label"
+                for="name"
+                labelName="Nombre completo"
+                isRequired={true}
+                classNamesInput="form__data__input js-input-name js-intro-name"
                 type="text"
-                maxLength="20"
-                value=""
-                name="name"
+                lenght="20"
+                nameInput="name"
                 id="name"
+                value={this.props.state.name}
                 placeholder="Ej: Catrina de Guadalupe"
               />
             </div>
             <div className="form__data__job" aria-label="Puesto">
-              <label className="form__data__label js-input-job" htmlFor="job">
-                Puesto
-              </label>
-              <input
-                required
-                className="form__data__input js-intro-job"
+              <InputFill
+                handleChange={this.props.handleChange}
+                classLabel="form__data__label js-input-job"
+                for="job"
+                labelName="Puesto"
+                isRequired={true}
+                classNamesInput="form__data__input js-intro-job"
                 type="text"
-                maxLength="18"
-                value=""
-                name="job"
+                lenght="18"
+                nameInput="job"
                 id="job"
+                value={this.props.state.job}
                 placeholder="Ej: Calavera Garbancera"
               />
             </div>
-
+            {/* Meter en otro componente cuando podamos */}
             <div className="form__data__name" aria-label="Imagen de perfil">
               <label className="form__data__label" htmlFor="image">
                 Imagen de perfil
@@ -71,48 +74,56 @@ class Fill extends React.Component {
               </div>
             </div>
             <div className="form__data__name" aria-label="Contacto">
-              <label className="form__data__label" htmlFor="email">
-                Email
-              </label>
-              <input
-                required
-                className="form__data__input js-email js-intro-email"
+              <InputFill
+                handleChange={this.props.handleChange}
+                classLabel="form__data__label js-input-job"
+                for="email"
+                labelName="Email"
+                isRequired={true}
+                classNamesInput="form__data__input js-email js-intro-email"
                 type="email"
-                name="email"
+                nameInput="email"
                 id="email"
+                value={this.props.state.email}
                 placeholder="Ej: catrina.guadalupe@gmail.com"
               />
-
-              <label className="form__data__label" htmlFor="phone">
-                Teléfono
-              </label>
-              <input
-                className="form__data__input js-phone js-intro-phone"
+              <InputFill
+                handleChange={this.props.handleChange}
+                classLabel="form__data__label"
+                for="phone"
+                labelName="Teléfono"
+                isRequired={false}
+                classNamesInput="form__data__input js-phone js-intro-phone"
                 type="tel"
-                name="phone"
+                nameInput="phone"
                 id="phone"
+                value={this.props.state.phone}
                 placeholder="Ej: 01-11-55-55"
               />
-              <label className="form__data__label" htmlFor="linkedin">
-                Linkedin
-              </label>
-              <input
-                required
-                className="form__data__input js-linkedin js-intro-linkedin"
+              <InputFill
+                handleChange={this.props.handleChange}
+                classLabel="form__data__label"
+                for="linkedin"
+                labelName="Linkedin"
+                isRequired={true}
+                classNamesInput="form__data__input js-linkedin js-intro-linkedin"
                 type="text"
-                name="linkedin"
+                nameInput="linkedin"
                 id="linkedin"
+                value={this.props.state.linkedin}
                 placeholder="Ej: linkedin.com/in/catrina-guadalupe"
               />
-              <label className="form__data__label" htmlFor="github">
-                Github
-              </label>
-              <input
-                required
-                className="form__data__input js-github js-intro-github"
+              <InputFill
+                handleChange={this.props.handleChange}
+                classLabel="form__data__label"
+                for="github"
+                labelName="Github"
+                isRequired={true}
+                classNamesInput="form__data__input js-github js-intro-github"
                 type="text"
-                name="github"
+                nameInput="github"
                 id="github"
+                value={this.props.state.github}
                 placeholder="Ej: @catrina-guadalupe"
               />
             </div>
