@@ -7,10 +7,10 @@ class Card extends React.Component {
         <div className="preview__card__title">
           <div className="preview__card__title__inner txt-fter">
             <h2 className="preview__card__title__name js-name js-preview-name">
-              Nombre Apellido
+              {this.props.state.name || "Nombre Apellido"}
             </h2>
             <h3 className="preview__card__title__job txt-md txt-light js-job js-preview-job">
-              Front-end developer
+              {this.props.state.job || "Front-end developer"}
             </h3>
           </div>
         </div>
@@ -26,22 +26,24 @@ class Card extends React.Component {
           <ul className="preview__card__sm__list">
             <li className="preview__card__sm__list__icon">
               <a
-                href="www.adalab.es" // Esto lo hemos añadido para que no de error
+                href={this.props.state.phone} // Esto lo hemos añadido para que no de error
                 className="preview__card__sm__list__icon__link mobile js-preview-phone"
                 alt="Telephone"
                 target="_blank"
                 title="Teléfono"
+                rel="noreferrer"
               >
                 <i className="fas fa-mobile-alt"></i>
               </a>
             </li>
             <li className="preview__card__sm__list__icon">
               <a
-                href="www.gmail.com" // Esto lo hemos añadido para que no de error
+                href={this.props.state.email}
                 className="preview__card__sm__list__icon__link email js-preview-email"
                 alt="Email"
                 target="_blank"
                 title="Email"
+                rel="noreferrer"
               >
                 <i className="far fa-envelope"></i>
               </a>
@@ -49,11 +51,12 @@ class Card extends React.Component {
 
             <li className="preview__card__sm__list__icon">
               <a
-                href="www.linkedin.es" // Esto lo hemos añadido para que no de error
+                href={`https://www.linkedin.com/in/${this.props.state.linkedin}`}
                 className="js-preview-linkedin preview__card__sm__list__icon__link linkedin"
                 alt="Linkedin"
                 title="Linkedin"
                 target="_blank"
+                rel="noreferrer"
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>
@@ -61,11 +64,12 @@ class Card extends React.Component {
 
             <li className="preview__card__sm__list__icon">
               <a
-                href="www.github.com" // Esto lo hemos añadido para que no de error
+                href={`https://www.github.com/${this.props.state.github}`} //
                 className=" js-preview-github preview__card__sm__list__icon__link github"
                 alt="Github"
                 title="Github"
                 target="_blank"
+                rel="noreferrer"
               >
                 <i className="fab fa-github-alt"></i>
               </a>

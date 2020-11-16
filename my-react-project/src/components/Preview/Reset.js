@@ -7,6 +7,7 @@ class Reset extends React.Component {
         className="preview__btn txt-xs txt-up txt-fsec js-reset"
         type="reset"
         title="Reset"
+        onClick={this.props.handleReset}
       >
         <i className="far fa-trash-alt"></i>
         <span className="preview__btn__reset">Reset</span>

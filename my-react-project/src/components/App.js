@@ -20,6 +20,7 @@ class App extends React.Component {
       photo: "",
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
   handleChange(event) {
     const name = event.target.name;
@@ -27,12 +28,24 @@ class App extends React.Component {
       [name]: event.target.value,
     });
   }
+  handleReset() {
+    this.setState({
+      palette: 1,
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      photo: "",
+    });
+  }
   render() {
     return (
       <>
         <Header />
         <div className="grid">
-          <Preview />
+          <Preview state={this.state} handleReset={this.handleReset} />
           <Form state={this.state} handleChange={this.handleChange} />
         </div>
         <Footer />

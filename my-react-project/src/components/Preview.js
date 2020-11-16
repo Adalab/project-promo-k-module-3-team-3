@@ -8,8 +8,8 @@ class Preview extends React.Component {
     return (
       <section className="preview">
         <div className="preview__box">
-          <Reset />
-          <Card />
+          <Reset handleReset={this.props.handleReset} />
+          <Card state={this.props.state} />
         </div>
       </section>
     );
