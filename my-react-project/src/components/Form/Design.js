@@ -3,6 +3,14 @@ import "../../stylesheets/layout/_form-design.scss";
 import Collapsable from "./Collapsable";
 
 class Design extends React.Component {
+  constructor(props) {
+    super();
+    this.handleChangePalette = this.handleChangePalette.bind(this);
+  }
+  handleChangePalette(event) {
+    const number = parseInt(event.currentTarget.id);
+    this.props.handleChangePaletteStatus(number);
+  }
   render() {
     return (
       <fieldset className="form__design column">
@@ -16,12 +24,18 @@ class Design extends React.Component {
               <label htmlFor="color1" className="form__label">
                 Colores
               </label>
-              <div className="form__color__box js-col0">
+              <div
+                id="1"
+                className="form__color__box js-col0"
+                onClick={this.handleChangePalette}
+              >
                 <input
                   type="radio"
                   name="color"
-                  id="color1"
+                  id="1"
                   className="form__color__input js-color0"
+                  checked={this.props.state.palette === 1}
+                  onChange={this.handleChangePalette}
                 />
                 <div className="form__color__option js-color">
                   <div className="form__color__first color-box"></div>
@@ -32,11 +46,17 @@ class Design extends React.Component {
             </div>
             <div className="form__color">
               <label htmlFor="color1" className="form__label"></label>
-              <div className="form__color__box js-col1">
+              <div
+                id="2"
+                onClick={this.handleChangePalette}
+                className="form__color__box js-col1"
+              >
                 <input
                   type="radio"
                   name="color"
-                  id="color1"
+                  id="2"
+                  checked={this.props.state.palette === 2}
+                  onChange={this.handleChangePalette}
                   className="form__color__input js-color1"
                 />
                 <div className="form__color__option">
@@ -48,11 +68,17 @@ class Design extends React.Component {
             </div>
             <div className="form__color">
               <label htmlFor="color1" className="form__label"></label>
-              <div className="form__color__box js-col2">
+              <div
+                id="3"
+                onClick={this.handleChangePalette}
+                className="form__color__box js-col2"
+              >
                 <input
                   type="radio"
                   name="color"
-                  id="color1"
+                  id="3"
+                  checked={this.props.state.palette === 3}
+                  onChange={this.handleChangePalette}
                   className="form__color__input js-color2"
                 />
                 <div className="form__color__option">
@@ -64,11 +90,17 @@ class Design extends React.Component {
             </div>
             <div className="form__color">
               <label htmlFor="color1" className="form__label"></label>
-              <div className="form__color__box js-col3">
+              <div
+                id="4"
+                onClick={this.handleChangePalette}
+                className="form__color__box js-col3"
+              >
                 <input
                   type="radio"
                   name="color"
-                  id="color1"
+                  id="4"
+                  checked={this.props.state.palette === 4}
+                  onChange={this.handleChangePalette}
                   className="form__color__input js-color3"
                 />
                 <div className="form__color__option">

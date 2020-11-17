@@ -21,11 +21,17 @@ class App extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.handleChangePaletteStatus = this.handleChangePaletteStatus.bind(this);
   }
   handleChange(event) {
     const name = event.target.name;
     this.setState({
       [name]: event.target.value,
+    });
+  }
+  handleChangePaletteStatus(number) {
+    this.setState({
+      palette: number,
     });
   }
   handleReset() {
@@ -46,7 +52,11 @@ class App extends React.Component {
         <Header />
         <div className="grid">
           <Preview state={this.state} handleReset={this.handleReset} />
-          <Form state={this.state} handleChange={this.handleChange} />
+          <Form
+            state={this.state}
+            handleChange={this.handleChange}
+            handleChangePaletteStatus={this.handleChangePaletteStatus}
+          />
         </div>
         <Footer />
       </>

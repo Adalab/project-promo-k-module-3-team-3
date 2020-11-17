@@ -11,7 +11,10 @@ class Form extends React.Component {
         method="post"
         className="form txt-fsec txt-sm txt-light"
       >
-        <Design />
+        <Design
+          handleChangePaletteStatus={this.props.handleChangePaletteStatus}
+          state={this.props.state}
+        />
         <Fill handleChange={this.props.handleChange} state={this.props.state} />
         <Share />
       </form>
