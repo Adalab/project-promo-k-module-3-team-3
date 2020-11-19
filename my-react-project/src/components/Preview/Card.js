@@ -2,8 +2,18 @@ import React from "react";
 
 class Card extends React.Component {
   render() {
+    let paletteColor;
+    if (this.props.state.palette === 1) {
+      paletteColor = "palette0";
+    } else if (this.props.state.palette === 2) {
+      paletteColor = "palette1";
+    } else if (this.props.state.palette === 3) {
+      paletteColor = "palette2";
+    } else {
+      paletteColor = "palette3";
+    }
     return (
-      <article className="preview__card js-palette ">
+      <article className={`preview__card js-palette ${paletteColor}`}>
         <div className="preview__card__title">
           <div className="preview__card__title__inner txt-fter">
             <h2 className="preview__card__title__name js-name js-preview-name">
