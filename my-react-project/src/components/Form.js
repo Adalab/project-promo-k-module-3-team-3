@@ -20,7 +20,10 @@ class Form extends React.Component {
           state={this.props.state}
           handleChangePhoto={this.props.handleChangePhoto}
         />
-        <Share />
+        <Share
+          state={this.props.state}
+          handleShareClick={this.props.handleShareClick}
+        />
       </form>
     );
   }

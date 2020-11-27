@@ -20,8 +20,11 @@
     }
   }
 
-  &--message {
+  &--message-hidden {
     display: none;
+  }
+  &--message-block {
+    display: block;
   }
 }
 
