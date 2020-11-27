@@ -25,12 +25,10 @@ class Card extends React.Component {
           </div>
         </div>
         <div className="preview__card__box js__profile-image ">
-          <img
+          <div
             className="preview__card__box__img"
-            src="https://quizlet.com/cdn-cgi/image/f=auto,fit=cover,h=200,onerror=redirect,w=240/https://o.quizlet.com/-eqTyjYDzs5teZgDoQi9aQ.jpg"
-            alt="Imagen"
-            title="Imagen"
-          />
+            style={{ backgroundImage: `url(${this.props.state.photo})` }}
+          ></div>
         </div>
         <nav className="preview__card__sm" role="navigation">
           <ul className="preview__card__sm__list">

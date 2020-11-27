@@ -17,11 +17,18 @@ class CardGenerator extends React.Component {
       email: "",
       linkedin: "",
       github: "",
-      photo: "",
+      photo:
+        "https://quizlet.com/cdn-cgi/image/f=auto,fit=cover,h=200,onerror=redirect,w=240/https://o.quizlet.com/-eqTyjYDzs5teZgDoQi9aQ.jpg",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.handleChangePaletteStatus = this.handleChangePaletteStatus.bind(this);
+    this.handleChangePhoto = this.handleChangePhoto.bind(this);
+  }
+  handleChangePhoto(text) {
+    this.setState({
+      photo: text,
+    });
   }
   handleChange(event) {
     const name = event.target.name;
@@ -43,7 +50,8 @@ class CardGenerator extends React.Component {
       email: "",
       linkedin: "",
       github: "",
-      photo: "",
+      photo:
+        "https://quizlet.com/cdn-cgi/image/f=auto,fit=cover,h=200,onerror=redirect,w=240/https://o.quizlet.com/-eqTyjYDzs5teZgDoQi9aQ.jpg",
     });
   }
   render() {
@@ -56,6 +64,7 @@ class CardGenerator extends React.Component {
             state={this.state}
             handleChange={this.handleChange}
             handleChangePaletteStatus={this.handleChangePaletteStatus}
+            handleChangePhoto={this.handleChangePhoto}
           />
         </div>
         <Footer />

@@ -3,7 +3,31 @@ import "../../stylesheets/layout/_form.scss";
 import Collapsable from "./Collapsable";
 import InputFill from "./InputFill";
 
+const fr = new FileReader();
 class Fill extends React.Component {
+  constructor(props) {
+    super(props);
+    this.fileInput = React.createRef();
+    this.handleFileChange = this.handleFileChange.bind(this);
+    this.writeImage = this.writeImage.bind(this);
+    this.fakeClick = this.fakeClick.bind(this);
+  }
+
+  writeImage() {
+    const fileUrl = fr.result;
+    this.props.handleChangePhoto(fileUrl);
+    console.log(fileUrl);
+  }
+
+  handleFileChange() {
+    const file = this.fileInput.current.files[0];
+    fr.onload = this.writeImage;
+    fr.readAsDataURL(file);
+  }
+
+  fakeClick() {
+    this.fileInput.current.click();
+  }
   render() {
     return (
       <fieldset className="form__fill column txt-dark bold">
@@ -54,9 +78,11 @@ class Fill extends React.Component {
                 Imagen de perfil
               </label>
               <input
+                onChange={this.handleFileChange}
+                ref={this.fileInput}
                 className="form__data__image__input js__profile-upload-btn"
                 type="file"
-                name="image"
+                name=""
                 id="image"
               />
               <div className="form__data__image__buttonsbox">
@@ -65,14 +91,19 @@ class Fill extends React.Component {
                     type="button"
                     className="form__data__image__btn js__profile-trigger txt-sm txt-wh txt-fsec"
                     aria-label="Añadir imagen"
+                    onClick={this.fakeClick}
                   >
                     Añadir imagen
                   </button>
                 </div>
 
-                <div className="form__data__image__preview js__profile-preview"></div>
+                <div
+                  className="form__data__image__preview js__profile-preview"
+                  style={{ backgroundImage: `url(${this.props.state.photo})` }}
+                ></div>
               </div>
             </div>
+            {/* ///////// */}
             <div className="form__data__name" aria-label="Contacto">
               <InputFill
                 handleChange={this.props.handleChange}

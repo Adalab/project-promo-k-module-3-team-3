@@ -15,7 +15,11 @@ class Form extends React.Component {
           handleChangePaletteStatus={this.props.handleChangePaletteStatus}
           state={this.props.state}
         />
-        <Fill handleChange={this.props.handleChange} state={this.props.state} />
+        <Fill
+          handleChange={this.props.handleChange}
+          state={this.props.state}
+          handleChangePhoto={this.props.handleChangePhoto}
+        />
         <Share />
       </form>
     );
